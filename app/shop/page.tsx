@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { getAllProducts, getProductsByCategory } from "@/lib/products";
-import { CATEGORY_SLUGS } from "@/lib/constants";
-import type { ProductCategory } from "@/lib/types";
-import { CategoryTabs } from "@/components/shop/CategoryTabs";
-import { ProductGrid } from "@/components/shop/ProductGrid";
+import { Suspense } from "react";
+import { getAllProducts } from "@/lib/products";
+import { ShopContent } from "@/components/shop/ShopContent";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
@@ -12,19 +10,8 @@ export const metadata: Metadata = {
   description: "Browse Lumière's full collection of hand-poured soy candles.",
 };
 
-function isProductCategory(value: string | undefined): value is ProductCategory {
-  return !!value && CATEGORY_SLUGS.includes(value as ProductCategory);
-}
-
-export default async function ShopPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ category?: string }>;
-}) {
-  const { category } = await searchParams;
-  const activeCategory = isProductCategory(category) ? category : "all";
-  const products =
-    activeCategory === "all" ? getAllProducts() : getProductsByCategory(activeCategory);
+export default function ShopPage() {
+  const products = getAllProducts();
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
@@ -34,12 +21,9 @@ export default async function ShopPage({
         text="Every Scent, One Shelf"
         className="mt-5 font-display text-5xl font-normal text-charcoal sm:text-6xl"
       />
-      <div className="mt-10">
-        <CategoryTabs activeCategory={activeCategory} />
-      </div>
-      <div className="mt-12">
-        <ProductGrid products={products} />
-      </div>
+      <Suspense fallback={null}>
+        <ShopContent products={products} />
+      </Suspense>
     </div>
   );
 }

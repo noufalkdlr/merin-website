@@ -1,7 +1,19 @@
 "use client";
 
-import { ReactLenis } from "lenis/react";
-import type { ReactNode } from "react";
+import { ReactLenis, useLenis } from "lenis/react";
+import { usePathname } from "next/navigation";
+import { useEffect, type ReactNode } from "react";
+
+function LenisRouteResize() {
+  const lenis = useLenis();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    lenis?.resize();
+  }, [lenis, pathname]);
+
+  return null;
+}
 
 export function SmoothScrollProvider({ children }: { children: ReactNode }) {
   return (
@@ -9,10 +21,10 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
       root
       options={{
         lerp: 0.1,
-        duration: 1.2,
         smoothWheel: true,
       }}
     >
+      <LenisRouteResize />
       {children}
     </ReactLenis>
   );

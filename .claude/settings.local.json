@@ -21,7 +21,8 @@
       "Read(//c/Users/noufa/**)",
       "Read(//c/Users/noufa/AppData/Local/Temp/**)",
       "Bash(ls -la \"/c/Users/noufa/Downloads/founder.jpeg\")",
-      "Bash(cp \"/c/Users/noufa/Downloads/founder.jpeg\" \"/d/merin-website/public/images/founder.jpeg\" && ls -la \"/d/merin-website/public/images/founder.jpeg\")"
+      "Bash(cp \"/c/Users/noufa/Downloads/founder.jpeg\" \"/d/merin-website/public/images/founder.jpeg\" && ls -la \"/d/merin-website/public/images/founder.jpeg\")",
+      "Bash(command -v npx serve)"
     ]
   }
 }
