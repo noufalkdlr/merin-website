@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --turbopack --use-npm --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --turbopack --use-npm --yes)",
+      "Bash(npm install *)",
+      "Bash(npm install-scripts *)",
+      "Bash(npm rebuild *)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(xargs -I{} sh -c 'echo \"== {} ==\"; cat {}')",
+      "Bash(npm run *)",
+      "Bash(node -e \"const m = require\\('lucide-react'\\); console.log\\(Object.keys\\(m\\).filter\\(k => /insta|face|twit|social/i.test\\(k\\)\\)\\)\")",
+      "Bash(mkdir -p /home/noufal/Projects/merin-website/.claude)",
+      "Bash(ls -lat /home/noufal/Downloads/ 2>/dev/null | head -20)",
+      "Bash(mkdir -p /home/noufal/Projects/merin-website/public/images && cp /home/noufal/Downloads/candle.png /home/noufal/Projects/merin-website/public/images/hero-candle.png && ls -la /home/noufal/Projects/merin-website/public/images/hero-candle.png && file /home/noufal/Projects/merin-website/public/images/hero-candle.png)"
     ]
   }
 }
