@@ -6,24 +6,21 @@ import { fadeUp } from "@/lib/motion";
 
 export function BrandStoryStrip() {
   return (
-    <section className="bg-cream px-6 py-28 lg:px-16 lg:py-40 xl:px-20">
-      <div className="mx-auto max-w-[1920px]">
+    <section className="bg-cream pt-12 pb-28 lg:pt-16 lg:pb-40">
+      <div className="mx-auto max-w-7xl px-6 text-center lg:px-10">
         <motion.p
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-15% 0px" }}
+          animate="visible"
           variants={fadeUp}
-          className="max-w-4xl font-display text-4xl font-light leading-[1.15] text-charcoal sm:text-5xl lg:text-6xl xl:text-7xl"
+          style={{ fontSize: "clamp(2.25rem, 4.8vw, 2.5rem)" }}
+          className="mx-auto max-w-[1400px] font-display font-light leading-[1.15] text-charcoal 2xl:!text-[2.9rem]"
         >
-          Every candle is <span className="text-gold">poured by hand</span>, in
-          small batches — because a room deserves to smell{" "}
-          <span className="font-medium">considered</span>, not manufactured.
+          Every candle is <span className="text-burgundy">poured by hand</span>, in<br className="hidden lg:inline" /> small batches — because a room<br className="hidden lg:inline" /> deserves to smell considered, not<br className="hidden lg:inline" /> manufactured.
         </motion.p>
 
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-15% 0px" }}
+          animate="visible"
           variants={fadeUp}
           transition={{ delay: 0.1 }}
         >

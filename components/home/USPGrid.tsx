@@ -18,8 +18,7 @@ export function USPGrid() {
         <SectionLabel text="Why Lumière" light />
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-10% 0px" }}
+          animate="visible"
           variants={staggerContainer(0.12)}
           className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4"
         >

@@ -60,7 +60,7 @@ export default function ContactPage() {
             <p className="mt-1 text-sm text-charcoal/70">
               Lumière Candle Studio
               <br />
-              Bandra West, Mumbai, India
+              Kalletumkara, Kerala, India
             </p>
           </div>
         </div>

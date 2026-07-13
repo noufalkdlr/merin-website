@@ -33,8 +33,7 @@ export function ImageReveal({
       <Image alt={alt} className={cn("object-cover", className)} {...imageProps} />
       <motion.div
         initial={isHorizontal ? { scaleX: 1 } : { scaleY: 1 }}
-        whileInView={isHorizontal ? { scaleX: 0 } : { scaleY: 0 }}
-        viewport={{ once: true, margin: "-10% 0px" }}
+        animate={isHorizontal ? { scaleX: 0 } : { scaleY: 0 }}
         transition={{ duration: 0.8, ease: EASE_LUXURY }}
         style={{ transformOrigin: ORIGIN[direction] }}
         className="absolute inset-0 bg-cream"

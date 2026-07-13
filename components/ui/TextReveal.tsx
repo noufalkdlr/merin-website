@@ -11,7 +11,7 @@ interface TextRevealProps {
   className?: string;
   delay?: number;
   stagger?: number;
-  /** Set false for content already in view at load (e.g. Hero) to reveal on mount instead of on scroll-into-view. */
+  /** Set true to reveal on scroll-into-view instead of on mount. Defaults to false — scroll-triggered reveal is unreliable with this site's smooth-scroll setup and can leave content permanently hidden below the fold. */
   onScroll?: boolean;
 }
 
@@ -21,7 +21,7 @@ export function TextReveal({
   className,
   delay = 0,
   stagger = 0.06,
-  onScroll = true,
+  onScroll = false,
 }: TextRevealProps) {
   const words = text.split(" ");
 

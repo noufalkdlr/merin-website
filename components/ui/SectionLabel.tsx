@@ -9,7 +9,7 @@ interface SectionLabelProps {
   index?: string;
   light?: boolean;
   className?: string;
-  /** Set false for content already in view at load (e.g. Hero) to reveal on mount instead of on scroll-into-view. */
+  /** Set true to reveal on scroll-into-view instead of on mount. Defaults to false — scroll-triggered reveal is unreliable with this site's smooth-scroll setup and can leave content permanently hidden below the fold. */
   onScroll?: boolean;
 }
 
@@ -18,7 +18,7 @@ export function SectionLabel({
   index,
   light,
   className,
-  onScroll = true,
+  onScroll = false,
 }: SectionLabelProps) {
   return (
     <div className={cn("flex items-center gap-3", className)}>

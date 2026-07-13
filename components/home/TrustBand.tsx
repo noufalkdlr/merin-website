@@ -13,13 +13,12 @@ const USPS = [
 
 export function TrustBand() {
   return (
-    <section className="bg-charcoal px-6 py-24 lg:px-16 lg:py-32 xl:px-20">
-      <div className="mx-auto max-w-[1920px]">
+    <section className="bg-charcoal py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionLabel text="Why Lumière" light />
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-10% 0px" }}
+          animate="visible"
           variants={staggerContainer(0.12)}
           className="mt-16 grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
         >

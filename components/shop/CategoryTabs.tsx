@@ -21,7 +21,7 @@ const TABS: { slug: ProductCategory | "all"; label: string; href: string }[] = [
 
 export function CategoryTabs({ activeCategory }: CategoryTabsProps) {
   return (
-    <div className="flex flex-wrap gap-x-7 gap-y-3 border-b border-charcoal/10 pb-1">
+    <div className="flex flex-wrap gap-x-7 gap-y-3 border-b border-charcoal/10 pb-4">
       {TABS.map((tab) => {
         const active = tab.slug === activeCategory;
         return (
@@ -29,7 +29,7 @@ export function CategoryTabs({ activeCategory }: CategoryTabsProps) {
             key={tab.slug}
             href={tab.href}
             className={cn(
-              "relative pb-3 text-xs font-medium uppercase tracking-[0.15em] transition-colors",
+              "relative pb-1.5 text-xs font-medium uppercase tracking-[0.15em] transition-colors",
               active ? "text-charcoal" : "text-charcoal/45 hover:text-charcoal",
             )}
           >

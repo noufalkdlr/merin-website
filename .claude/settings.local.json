@@ -12,7 +12,16 @@
       "Bash(node -e \"const m = require\\('lucide-react'\\); console.log\\(Object.keys\\(m\\).filter\\(k => /insta|face|twit|social/i.test\\(k\\)\\)\\)\")",
       "Bash(mkdir -p /home/noufal/Projects/merin-website/.claude)",
       "Bash(ls -lat /home/noufal/Downloads/ 2>/dev/null | head -20)",
-      "Bash(mkdir -p /home/noufal/Projects/merin-website/public/images && cp /home/noufal/Downloads/candle.png /home/noufal/Projects/merin-website/public/images/hero-candle.png && ls -la /home/noufal/Projects/merin-website/public/images/hero-candle.png && file /home/noufal/Projects/merin-website/public/images/hero-candle.png)"
+      "Bash(mkdir -p /home/noufal/Projects/merin-website/public/images && cp /home/noufal/Downloads/candle.png /home/noufal/Projects/merin-website/public/images/hero-candle.png && ls -la /home/noufal/Projects/merin-website/public/images/hero-candle.png && file /home/noufal/Projects/merin-website/public/images/hero-candle.png)",
+      "Bash(ls -la \"/c/Users/noufa/Downloads/zaslia/\" 2>&1)",
+      "Bash(cp \"/c/Users/noufa/Downloads/zaslia/Zaslia.otf\" \"/d/merin-website/public/fonts/Zaslia.otf\")",
+      "Bash(npx tsc *)",
+      "Bash(netstat -ano)",
+      "Read(//c/Users/noufa/Downloads/**)",
+      "Read(//c/Users/noufa/**)",
+      "Read(//c/Users/noufa/AppData/Local/Temp/**)",
+      "Bash(ls -la \"/c/Users/noufa/Downloads/founder.jpeg\")",
+      "Bash(cp \"/c/Users/noufa/Downloads/founder.jpeg\" \"/d/merin-website/public/images/founder.jpeg\" && ls -la \"/d/merin-website/public/images/founder.jpeg\")"
     ]
   }
 }

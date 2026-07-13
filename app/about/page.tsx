@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     "The story behind Lumière — hand-poured, small-batch soy candles made with care.",
 };
 
-const FOUNDER_IMAGE =
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1000&q=80&auto=format&fit=crop";
+const FOUNDER_IMAGE = "/images/founder.jpeg";
 
 export default function AboutPage() {
   return (
@@ -52,7 +51,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <ImageReveal
             src={FOUNDER_IMAGE}
-            alt="Portrait of the founder of Lumière"
+            alt="Portrait of Merin Joy, founder of Lumière"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             direction="right"
@@ -63,7 +62,7 @@ export default function AboutPage() {
               Meet the Maker
             </span>
             <h2 className="mt-3 font-display text-3xl font-normal text-charcoal">
-              Anjali Mehra, Founder
+              Merin Joy, Founder
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-charcoal/75">
               &ldquo;I started {BRAND_NAME} because I wanted candles that felt
