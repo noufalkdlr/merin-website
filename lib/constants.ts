@@ -2,7 +2,7 @@ import type { ProductCategory } from "./types";
 
 export const BRAND_NAME = "Lumière";
 
-export const WHATSAPP_NUMBER = "9746469319";
+export const WHATSAPP_NUMBER = "7909241789";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
